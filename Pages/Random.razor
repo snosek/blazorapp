@@ -1,0 +1,19 @@
+﻿@page "/rng"
+
+<PageTitle>RNG</PageTitle>
+
+<h1>RNG</h1>
+
+<p role="status">Random integer between 0 and 100: @result</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    System.Random rnd = new System.Random();
+    private int result = 0;
+
+    private void IncrementCount()
+    {
+        result = rnd.Next(0, 100);
+    }
+}
