@@ -6,14 +6,14 @@
 
 <p role="status">Random integer between 0 and 100: @result</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="RNG">Click me</button>
 
 @code {
-    System.Random rnd = new System.Random();
+    System.Random rand = new System.Random();
     private int result = 0;
 
-    private void IncrementCount()
+    private void RNG()
     {
-        result = rnd.Next(0, 100);
+        result = rand.Next(0, 100);
     }
 }
